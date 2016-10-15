@@ -63,3 +63,16 @@ public class Model extends JLabel {
 		return model;
 	}
 }
+//FileDialog fdial=new FileDialog(f,"Open Box",FileDialog.LOAD);
+		// fdial.setSize(300,300);
+		// fdial.setLocationRelativeTo(null);
+		// fdial.setVisible(true);
+		// String str=fdial.getDirectory();
+		// fl=new File(str);
+		// flist=fl.listFiles();
+
+		// String name = fl.getAbsolutePath();
+		// System.out.println(name);
+		// System.out.println(flist);
+		// image = new ImageIcon(name +".jpg");
+		// System.out.println(image);
