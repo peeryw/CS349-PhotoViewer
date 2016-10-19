@@ -16,16 +16,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Model extends JLabel {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	
 	ImageIcon image = new ImageIcon();
 	Maintain m;
 	JFrame f;
 	String str;
-	File fl;
-	File[] flist;
 	JFileChooser fc;
 
 	public Container Model() {
@@ -62,4 +58,5 @@ public class Model extends JLabel {
 		model.add(scrollPane);
 		return model;
 	}
+	
 }

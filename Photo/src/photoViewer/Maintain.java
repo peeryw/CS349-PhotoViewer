@@ -17,14 +17,9 @@ public class Maintain extends JPanel implements ActionListener {
 	JButton addFileButton = new JButton("Add Photo");
 	JButton deleteFileButton = new JButton("Delete");
 	Container maint = Box.createHorizontalBox();
-	Vector<ImageIcon> photoAlbum = new Vector<ImageIcon>();
+	SQLManager photo;
 	ImageIcon image = new ImageIcon();
-	Maintain m;
-	JFrame f;
-	String str;
-	File fl;
-	File[] flist;
-
+	
 	public Container Maintain() {
 
 		saveButton.setEnabled(false);
@@ -57,17 +52,6 @@ public class Maintain extends JPanel implements ActionListener {
 		return null;
 	}
 
-	public ImageIcon deletePhoto() {
-		// remove photo from vector
-		return null;
-	}
-
-	public void saveChanges() {
-		// update photo in vector
-		// save changes to description
-		// save changes to date
-	}
-
 	public ImageIcon addPhoto() {
 		
 		ImageIcon icon = null;
@@ -89,13 +73,13 @@ public class Maintain extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent evt) {
 		if (evt.getSource() == deleteFileButton) {
-			deletePhoto();
+			photo.Deletecurrent();
 			System.out.println("delete");
 		} else if (evt.getSource() == saveButton) {
-			saveChanges();
+			photo.EditPhoto(null, null);
 			System.out.println("saved changes");
 		} else if (evt.getSource() == addFileButton) {
-			addPhoto();
+			//photo.Addphoto(null, name, name);
 			System.out.println("photo added");
 		}
 	}

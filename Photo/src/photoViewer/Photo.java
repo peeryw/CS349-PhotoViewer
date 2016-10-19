@@ -1,29 +1,25 @@
 package photoViewer;
 
 import java.io.Serializable;
+import javax.swing.ImageIcon;
 
 public class Photo implements Serializable{
     
 	private static final long serialVersionUID = 1L;
 	
-	private String imgLocation;
-    private String description;
-    private String date;
+	public ImageIcon image;
+    public String description;
+    public String date;
 
-    public Photo(){  }
-
-    public Photo(String img, String desc, String date){
-        this.imgLocation = img;
-        this.description = desc;
-        this.date = date;
+    public Photo(ImageIcon img, String desc, String DATE){
+        image = img;
+        description = desc;
+        date = DATE;
     }
-
-    public String getImgPath(){return this.imgLocation;}
-    public String getDescription(){return this.description;}
-    public String getDate() {return date;}
-
-    public void setImgPath(String path){this.imgLocation = path;}
-    public void setDescription(String desc){this.description = desc;}
-    public void setDate(String date){this.date = date;}
+    
+    public void editPhotoData(String desc, String DATE){
+    	description = desc;
+    	date = DATE;
+    }
 
 }
